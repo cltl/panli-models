@@ -1,6 +1,12 @@
 # PANLI Models
 
-This repository contains code and resources for evaluating models on the [PANLI dataset](https://github.com/cltl/panli).
+This repository contains code and resources for evaluating Transformer models on the PANLI dataset. The results and analysis using these models are reported in detail in the following thesis:
+
+> van Son, C. M. (2024). *Representative Resources for Perspective-Aware Natural Language Inference* (PhD thesis, Vrije Universiteit Amsterdam). [https://doi.org/10.5463/thesis.644](https://doi.org/10.5463/thesis.644)
+
+See also the following related projects:
+- [panli](https://github.com/cltl/panli) — The dataset used in this project.
+- [panli-crowdtruth](https://github.com/cltl/panli-crowdtruth) — An analysis of the PANLI dataset using the CrowdTruth framework.
 
 ## Kedro Pipeline
 
@@ -97,10 +103,6 @@ kedro jupyter lab
 
 This will launch JupyterLab with the Kedro context preloaded, allowing you to access Kedro datasets, pipelines, and configuration directly within your notebooks.
 
-## Related Projects
-
-- [panli](https://github.com/cltl/panli) — The dataset used in this project.
-- [panli-crowdtruth](https://github.com/cltl/panli-crowdtruth) — An analysis of the PANLI dataset using the CrowdTruth framework.
 
 ## Citation
 
@@ -112,7 +114,7 @@ If you use this repository, please consider citing:
     <summary>BibTeX</summary>
     ```bibtex
     @phdthesis{ba18bc83a2be4b29805c6b91aaa9a152,
-        title = "Representative Resources for Perspective-Aware Natural Language Inference",
+        title = "Representative Regit pushsources for Perspective-Aware Natural Language Inference",
         author = "{van Son}, {Chantal Michelle}",
         year = "2024",
         month = nov,
@@ -124,10 +126,4 @@ If you use this repository, please consider citing:
     }
     ```
     </details>
-
-
-
-## License
-
-This project is licensed under the Apache License 2.0.
 
