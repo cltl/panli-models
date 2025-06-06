@@ -10,23 +10,6 @@ mapping_columns_mnli:
   sentence2: hypothesis
   gold_label: label
 
-mapping_columns_cb:
-  idx: unit_id
-  premise: premise
-  hypothesis: hypothesis
-  label: label
-
-mapping_columns_anli:
-  uid: unit_id
-  context: premise
-  hypothesis: hypothesis
-  label: label
-
-mapping_labels_anli:
-  e: entailment
-  c: contradiction
-  n: neutral
-
 mapping_labels_mnli:
   entailment: entailment
   contradiction: contradiction
