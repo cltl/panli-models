@@ -1,5 +1,6 @@
 # PANLI Models
 
+## Overview
 This repository contains code and resources for evaluating Transformer models on the PANLI dataset. The results and analysis using these models are reported in detail in the following thesis:
 
 > van Son, C. M. (2024). *Representative Resources for Perspective-Aware Natural Language Inference* (PhD thesis, Vrije Universiteit Amsterdam). [https://doi.org/10.5463/thesis.644](https://doi.org/10.5463/thesis.644)
@@ -55,6 +56,38 @@ This project is structured as a [Kedro](https://kedro.org/) pipeline, enabling r
     python -m spacy download en_core_web_lg
     ```
 
+### Downloading MultiNLI
+
+The MultiNLI dataset is required for benchmarking. Please follow these steps to download and place it in the correct directory:
+
+1. **Download the MultiNLI zip file:**
+
+    - [Official URL (Stanford)](https://cims.nyu.edu/~sbowman/multinli/)
+    - [Direct download link (zip)](https://cims.nyu.edu/~sbowman/multinli/multinli_1.0.zip)
+
+2. **Extract the contents** of the downloaded `multinli_1.0.zip` file.
+
+3. **Move the extracted folder** to the following location:
+
+    ```
+    data/benchmarks/original/multinli_1.0
+    ```
+
+    The directory structure should look like:
+
+    ```
+    data/
+      benchmarks/
+         original/
+            multinli_1.0/
+              multinli_1.0_train.jsonl
+              multinli_1.0_dev_matched.jsonl
+              multinli_1.0_dev_mismatched.jsonl
+              ...
+    ```
+
+Make sure the files are in the correct location before running the pipeline.
+
 ## Usage
 
 ### Running the Kedro Pipelines
@@ -88,8 +121,15 @@ Replace `<pipeline_name>` or `<node_name>` with the desired pipeline. Available 
 - `shap`: Generates SHAP explanations for model interpretability.
 - `latex`: Produces LaTeX tables and figures for reporting results.
 
+The `finetuning` and `prediction` pipelines consist of multiple nodes (corresponding to the different experiments that were performed), and running the entire pipeline can be computationally intensive. To save time and resources, you may choose to execute only specific nodes within these pipelines. For example, to run only the `predict_deberta_panli` node:
 
- For more options, see the [Kedro documentation](https://docs.kedro.org/en/stable/index.html).
+```bash
+kedro run --nodes=predict_deberta_panli
+```
+
+Refer to the pipeline source files to see the full list of available nodes (e.g., `src/panli_models/pipelines/finetuning/pipeline.py`).
+
+For more options, see the [Kedro documentation](https://docs.kedro.org/en/stable/index.html).
 
 ### Using Kedro with JupyterLab
 
