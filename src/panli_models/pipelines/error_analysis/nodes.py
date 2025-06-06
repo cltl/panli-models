@@ -7,7 +7,7 @@ import spacy
 from spacy.tokens import Doc, Token
 
 from panli_models.config.columns import COL_HYPOTHESIS, COL_PREMISE
-from panli_models.config.columns_lexicon import (  # COL_CLASS,; COL_SIP_NSIP,; COL_FACTUALITY_TYPE,
+from panli_models.config.columns_lexicon import (
     COL_DEPRELS,
     COL_FACTUALITY_TYPE_FULL,
     COL_LEMMA,
