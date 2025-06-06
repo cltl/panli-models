@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "panli-models"
+version = "0.1.0"
+description = ""
+authors = ["Chantal van Son <c.m.van.son@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.3"
+kedro = "^0.19.9"
+kedro-datasets = "^5.0.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+flake8 = "^7.1.1"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project.scripts]
+panli-models = "panli_models.__main__:main"
+
+[tool.kedro]
+package_name = "panli_models"
+project_name = "panli-models"
+kedro_init_version = "0.19.12"
+tools = "['None']"
+example_pipeline = "False"
+source_dir = "src"
+
+[project.entry-points."kedro.hooks"]
+
+[tool.setuptools.dynamic.version]
+attr = "panli_models.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
+namespaces = false
