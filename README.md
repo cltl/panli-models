@@ -154,7 +154,7 @@ If you use this repository, please consider citing:
     <summary>BibTeX</summary>
     ```bibtex
     @phdthesis{ba18bc83a2be4b29805c6b91aaa9a152,
-        title = "Representative Regit pushsources for Perspective-Aware Natural Language Inference",
+        title = "Representative Resources for Perspective-Aware Natural Language Inference",
         author = "{van Son}, {Chantal Michelle}",
         year = "2024",
         month = nov,
