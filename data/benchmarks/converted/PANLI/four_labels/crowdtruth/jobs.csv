@@ -1,0 +1,2 @@
+job,duration,judgment,judgments.per.worker,output.answer_value.annotations,output.answer_value.unique_annotations,runtime,runtime.per_unit,unit,worker
+../data/prolific/results/results,0,74629,37.5397384305835,9.999866005627764,2.9417124480771806,56 days 03:54:04.000000000,0 days 00:10:50.200187592,7463,1988
