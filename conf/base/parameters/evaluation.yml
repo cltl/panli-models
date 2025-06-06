@@ -1,0 +1,27 @@
+all_models:
+  - deberta_panli
+  - deberta_mnli
+  - deberta_mnli_panli
+  - deberta_panli_h
+  - deberta_mnli_h
+  - deberta_mnli_panli_h
+  - deberta_panli_p
+  - deberta_mnli_p
+  - deberta_mnli_panli_p
+  - majority_baseline
+
+selected_models:
+  - deberta_panli
+  - deberta_mnli
+  - deberta_mnli_panli
+  - deberta_panli_h
+  - deberta_panli_p
+  - deberta_mnli_panli_h
+  - majority_baseline
+
+core_models:
+  - deberta_panli
+  - deberta_mnli
+  - deberta_mnli_panli
+
+only_f1: True

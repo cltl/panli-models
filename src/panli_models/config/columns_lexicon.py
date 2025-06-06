@@ -1,0 +1,7 @@
+COL_CLASS = "class"
+COL_POS = "pos"
+COL_LEMMA = "lemma"
+COL_DEPRELS = "deprels"
+COL_SIP_NSIP = "SIP/NSIP"
+COL_FACTUALITY_TYPE = "factuality_type"
+COL_FACTUALITY_TYPE_FULL = "factuality_type_full"

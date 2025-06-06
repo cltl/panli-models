@@ -1,0 +1,62 @@
+# Four labels
+units_four_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/four_labels/crowdtruth/units.pickle
+
+workers_four_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/four_labels/crowdtruth/workers.pickle
+
+annotations_four_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/four_labels/crowdtruth/annotations.pickle
+
+judgments_four_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/four_labels/crowdtruth/jugments.pickle
+
+jobs_four_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/four_labels/crowdtruth/jobs.pickle
+
+# Three labels
+units_three_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/three_labels/crowdtruth/units.pickle
+
+workers_three_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/three_labels/crowdtruth/workers.pickle
+
+annotations_three_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/three_labels/crowdtruth/annotations.pickle
+
+judgments_three_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/three_labels/crowdtruth/jugments.pickle
+
+jobs_three_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/three_labels/crowdtruth/jobs.pickle
+
+# Two labels
+units_two_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/two_labels/crowdtruth/units.pickle
+
+workers_two_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/two_labels/crowdtruth/workers.pickle
+
+annotations_two_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/two_labels/crowdtruth/annotations.pickle
+
+judgments_two_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/two_labels/crowdtruth/jugments.pickle
+
+jobs_two_labels:
+  type: pickle.PickleDataset
+  filepath: data/benchmarks/converted/PANLI/two_labels/crowdtruth/jobs.pickle

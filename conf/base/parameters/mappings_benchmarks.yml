@@ -1,0 +1,37 @@
+mapping_columns_dnc:
+  pair-id: unit_id
+  context: premise
+  hypothesis: hypothesis
+  label: label
+
+mapping_columns_mnli:
+  pairID: unit_id
+  sentence1: premise
+  sentence2: hypothesis
+  gold_label: label
+
+mapping_columns_cb:
+  idx: unit_id
+  premise: premise
+  hypothesis: hypothesis
+  label: label
+
+mapping_columns_anli:
+  uid: unit_id
+  context: premise
+  hypothesis: hypothesis
+  label: label
+
+mapping_labels_anli:
+  e: entailment
+  c: contradiction
+  n: neutral
+
+mapping_labels_mnli:
+  entailment: entailment
+  contradiction: contradiction
+  neutral: neutral
+
+split_train_val_mnli:
+  validation_size: 0.15
+  random_state: 2021

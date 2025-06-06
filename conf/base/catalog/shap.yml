@@ -1,0 +1,7 @@
+shap_values_p:
+  type: pickle.PickleDataset
+  filepath: data/evaluation/shap_values_p.pkl
+
+shap_values_h:
+  type: pickle.PickleDataset
+  filepath: data/evaluation/shap_values_h.pkl

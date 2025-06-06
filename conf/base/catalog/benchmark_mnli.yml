@@ -1,0 +1,45 @@
+# original
+mnli_train_original:
+  type: pandas.JSONDataset
+  filepath: data/benchmarks/original/multinli_1.0/multinli_1.0_train.jsonl
+  load_args:
+    lines: True
+
+mnli_dev_matched_original:
+  type: pandas.JSONDataset
+  filepath: data/benchmarks/original/multinli_1.0/multinli_1.0_dev_matched.jsonl
+  load_args:
+    lines: True
+
+mnli_dev_mismatched_original:
+  type: pandas.JSONDataset
+  filepath: data/benchmarks/original/multinli_1.0/multinli_1.0_dev_mismatched.jsonl
+  load_args:
+    lines: True
+
+# after splitting train into train/val
+# MemoryDataSet
+# mnli_train_original:
+#   type: pandas.ParquetDataset
+#   filepath: data/benchmarks/converted/MNLI/split_original/train.parquet
+
+# mnli_val_original:
+#   type: pandas.ParquetDataset
+#   filepath: data/benchmarks/converted/MNLI/split_original/val.parquet
+
+# after conversion
+mnli_train:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/MNLI/train.parquet
+
+mnli_val:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/MNLI/val.parquet
+
+mnli_test_matched:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/MNLI/test_matched.parquet
+
+mnli_test_mismatched:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/MNLI/test_mismatched.parquet

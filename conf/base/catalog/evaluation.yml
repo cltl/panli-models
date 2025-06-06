@@ -1,0 +1,29 @@
+results_test:
+  type: pandas.ParquetDataset
+  filepath: data/evaluation/results_panli_test.parquet 
+
+results_val:
+  type: pandas.ParquetDataset
+  filepath: data/evaluation/results_panli_val.parquet 
+
+results_mnli_matched:
+  type: pandas.ParquetDataset
+  filepath: data/evaluation/results_mnli_matched.parquet 
+
+results_mnli_mismatched:
+  type: pandas.ParquetDataset
+  filepath: data/evaluation/results_mnli_mismatched.parquet 
+
+classification_reports:
+  type: partitions.PartitionedDataset
+  path: data/evaluation/classification_reports
+  dataset: pandas.ParquetDataset
+  filename_suffix: .parquet
+
+accuracies_table_panli_test:
+  type: pandas.ParquetDataset
+  filepath: data/evaluation/accuracies_table_panli_test.parquet
+
+accuracies_table_panli_val:
+  type: pandas.ParquetDataset
+  filepath: data/evaluation/accuracies_table_panli_val.parquet

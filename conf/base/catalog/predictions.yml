@@ -1,0 +1,107 @@
+# merged predictions
+predictions_panli_test:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_test.parquet
+
+predictions_panli_val:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_val.parquet
+
+predictions_mnli_test_matched:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/mnli_test_matched.parquet
+
+predictions_mnli_test_mismatched:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/mnli_test_mismatched.parquet
+
+
+# partitioned dataset for all
+all_predictions_panli_test:
+  type: partitions.PartitionedDataset
+  path: data/predictions/panli_test
+  dataset: pandas.ParquetDataset
+  filename_suffix: .parquet
+
+all_predictions_panli_val:
+  type: partitions.PartitionedDataset
+  path: data/predictions/panli_val
+  dataset: pandas.ParquetDataset
+  filename_suffix: .parquet
+
+all_predictions_mnli_matched:
+  type: partitions.PartitionedDataset
+  path: data/predictions/mnli_matched
+  dataset: pandas.ParquetDataset
+  filename_suffix: .parquet
+
+all_predictions_mnli_mismatched:
+  type: partitions.PartitionedDataset
+  path: data/predictions/mnli_mismatched
+  dataset: pandas.ParquetDataset
+  filename_suffix: .parquet
+
+# baseline
+predictions_majority_baseline_panli_test:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_test/majority_baseline.parquet
+
+predictions_majority_baseline_panli_test_4:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_test_4/majority_baseline.parquet
+
+predictions_majority_baseline_panli_val:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_val/majority_baseline.parquet
+
+predictions_majority_baseline_panli_val_4:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_val_4/majority_baseline.parquet
+
+predictions_majority_baseline_mnli_m:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/mnli_matched/majority_baseline.parquet
+
+predictions_majority_baseline_mnli_mm:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/mnli_mismatched/majority_baseline.parquet
+
+# DeBERTa
+predictions_deberta_mnli_pretrained:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_test/deberta_mnli_pretrained.parquet
+  
+predictions_deberta_mnli:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_test/deberta_mnli.parquet
+
+predictions_deberta_panli:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_test/deberta_panli.parquet
+
+predictions_deberta_panli_4:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_test_4/deberta_panli.parquet
+
+# Combinations with MNLI
+predictions_deberta_mnli_panli:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_test/deberta_mnli_panli.parquet
+
+
+# Validation set
+predictions_deberta_panli_val:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_val/deberta_panli.parquet
+
+predictions_deberta_panli_val_4:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_val_4/deberta_panli.parquet
+
+predictions_deberta_mnli_val:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_val/deberta_mnli.parquet
+
+predictions_deberta_mnli_panli_val:
+  type: pandas.ParquetDataset
+  filepath: data/predictions/panli_val/deberta_mnli_panli.parquet

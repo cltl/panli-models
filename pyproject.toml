@@ -6,15 +6,26 @@ authors = ["Chantal van Son <c.m.van.son@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.14"
 pandas = "^2.2.3"
 kedro = "^0.19.9"
 kedro-datasets = "^5.0.0"
+scikit-learn = "^1.7.0"
+shap = "^0.47.2"
+nltk = "^3.6.3"
+spacy = "^3.1.4"
+plotly = "^4.14.3"
+kaleido = "0.2.1"
+transformers = "^4.3.2"
+torch = "^2.0.0"
+crowdtruth = "^2.1"
+pyarrow = "^20.0.0"
+fastparquet = "^2024.11.0"
 
-[tool.poetry.group.dev.dependencies]
-black = "^24.10.0"
-flake8 = "^7.1.1"
-isort = "^5.13.2"
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+flake8 = "^3.8.3"
+isort = "^5.0.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -39,3 +50,6 @@ attr = "panli_models.__version__"
 [tool.setuptools.packages.find]
 where = [ "src",]
 namespaces = false
+
+[tool.kedro_telemetry]
+project_id = "a69deed420fa404795651381488f8a8a"

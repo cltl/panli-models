@@ -1,0 +1,7 @@
+mnli_panli_train:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/MNLI_PANLI/train.parquet
+
+mnli_panli_val:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/MNLI_PANLI/val.parquet

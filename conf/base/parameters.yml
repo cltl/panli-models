@@ -1,0 +1,8 @@
+split_train_val_test:
+  train_size: 0.7
+  validation_size: 0.15
+  test_size: 0.15
+  random_state: 2022
+
+evaluation:
+  labels: ["entailment", "neutral", "contradiction"]

@@ -1,0 +1,50 @@
+# see also crowdtruth.yml
+
+# original
+panli_prolific:
+  type: pandas.CSVDataset
+  filepath: data/benchmarks/original/panli/prolific_results.csv
+
+# after conversion
+panli_four_labels:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/PANLI/four_labels/panli.parquet
+
+panli_three_labels:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/PANLI/three_labels/panli.parquet
+
+panli_two_labels:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/PANLI/two_labels/panli.parquet
+
+# after splitting
+panli_train:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/PANLI/three_labels/train.parquet
+
+panli_val:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/PANLI/three_labels/val.parquet
+
+panli_test:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/PANLI/three_labels/test.parquet
+
+# after splitting
+panli_train_4:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/PANLI/four_labels/train.parquet
+
+panli_val_4:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/PANLI/four_labels/val.parquet
+
+panli_test_4:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/PANLI/four_labels/test.parquet
+
+# annotations (error analysis)
+panli_val_annotations:
+  type: pandas.ParquetDataset
+  filepath: data/benchmarks/converted/PANLI/three_labels/val_annotations.parquet

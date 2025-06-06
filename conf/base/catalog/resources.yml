@@ -1,0 +1,3 @@
+factuality_lexicon:
+  type: pandas.CSVDataset
+  filepath: data/resources/sauri_lexicon.csv

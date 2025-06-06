@@ -1,0 +1,5 @@
+panli_path_prolific: data/benchmarks/original/panli/prolific_results.csv
+
+four_labels: 4
+three_labels: 3
+two_labels: 2

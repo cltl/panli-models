@@ -1,0 +1,119 @@
+# fine-tuning parameters
+deberta_mnli_pretrained: 
+  model_name: microsoft/deberta-base
+  model_path: microsoft/deberta-base-mnli
+  hypothesis_only: False
+  premise_only: False
+
+# benchmarks ('only')
+deberta_mnli: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-mnli
+  hypothesis_only: False
+  premise_only: False
+
+deberta_panli: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-panli
+  hypothesis_only: False
+  premise_only: False
+
+deberta_panli_4: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-panli-4
+  hypothesis_only: False
+  premise_only: False
+
+
+# combinations with MNLI
+deberta_mnli_panli: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-mnli-panli
+  hypothesis_only: False
+  premise_only: False
+
+# hypothesis-only
+deberta_mnli_panli_h: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-mnli-panli-h
+  hypothesis_only: True
+  premise_only: False
+
+deberta_mnli_h: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-mnli-h
+  hypothesis_only: True
+  premise_only: False
+
+deberta_panli_h: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-panli-h
+  hypothesis_only: True
+  premise_only: False
+
+deberta_panli_4_h: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-panli-4-h
+  hypothesis_only: True
+  premise_only: False
+
+# premise-only
+# TODO: adapt hypothesis-only in function for premise-only
+deberta_mnli_panli_p: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-mnli-panli-p
+  hypothesis_only: False
+  premise_only: True
+
+deberta_mnli_p: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-mnli-p
+  hypothesis_only: False
+  premise_only: True
+
+deberta_panli_p: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-panli-p
+  hypothesis_only: False
+  premise_only: True
+
+deberta_panli_4_p: 
+  model_name: microsoft/deberta-base
+  model_path: data/models/deberta-base-panli-4-p
+  hypothesis_only: False
+  premise_only: True
+
+
+# logging directory
+logging_dir: data/models/logs
+
+# hyperparameters
+hyperparameters:
+  num_train_epochs: 10
+  weight_decay: 0.01  # default=0
+  adam_epsilon: 1.0e-6  # default=1e-8
+  adam_beta1: 0.9  # default=0.9
+  adam_beta2: 0.999  # default=0.999
+  max_grad_norm: 1.0 #default=1.0
+  # hp space params
+  per_device_train_batch_size: 32 # default=8
+  warmup_steps: 50 # default=0
+  learning_rate: 2.0e-5 #default=5e-05
+  #drop_out?
+
+hp_space:
+  learning_rate:
+    - 5.0e-6
+    - 8.0e-6
+    - 9.0e-6
+    - 1.0e-5
+  warmup_steps:
+    - 50
+    - 100
+    - 500
+    - 1000
+  per_device_train_batch_size:
+    - 16
+    - 32
+    - 48
+    - 64

@@ -1,0 +1,39 @@
+latex_table_data_overview:
+  type: text.TextDataset
+  filepath: data/latex/table_data_overview_three_labels.tex
+
+latex_table_data_overview_4:
+  type: text.TextDataset
+  filepath: data/latex/table_data_overview_four_labels.tex
+
+latex_table_class_counts:
+  type: text.TextDataset
+  filepath: data/latex/table_class_counts_three_labels.tex
+
+latex_table_class_counts_4:
+  type: text.TextDataset
+  filepath: data/latex/table_class_counts_four_labels.tex
+
+latex_table_partial_models:
+  type: text.TextDataset
+  filepath: data/latex/table_results_partial_models.tex
+
+latex_table_results:
+  type: text.TextDataset
+  filepath: data/latex/table_results.tex
+
+latex_table_results_val:
+  type: text.TextDataset
+  filepath: data/latex/table_results_val.tex
+
+latex_table_results_per_category:
+  type: text.TextDataset
+  filepath: data/latex/results_per_category.tex
+
+latex_table_results_per_category_f1:
+  type: text.TextDataset
+  filepath: data/latex/results_per_category_f1.tex
+
+latex_table_results_per_linguistic_phenomenon:
+  type: text.TextDataset
+  filepath: data/latex/results_per_linguistic_phenomenon.tex
